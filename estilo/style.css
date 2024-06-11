@@ -1,0 +1,223 @@
+@charset "UFT-*";
+/* Variavel para definição de parametros Root */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('../pacote-projeto-d010/fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+
+
+/*CONFIGURAÇÃO PADRÃO do SITE*/
+:root {
+    --cor0:#3176c0c0; 
+    --cor1:#3F6996;
+    --cor2:#157DEB;
+    --cor3:#0a0a0a3a;
+    --cor4:#313841;
+    --cor5:#2b2e31;
+    --cor6:#185399;
+    
+    
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque:'Bebas Neue','cursive';
+    --font-android:'Android','cursive';
+    
+}
+
+/* *{ -> seletor global */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color:var(--cor0);
+    font-family: var(--font-padrao);
+}
+
+a.externo::after { /* Incone de site extreno */
+    content: '\1F517';
+}
+
+
+/* text-align: center --- Deixa o texto centralizado */
+/* background-image: linear-gradient(to bottom, var(cor), var(cor) ) -- Gradiente */
+header {
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor3));
+    background-color:var(--cor6);
+    min-height: 150px;
+    text-align: center; 
+    padding-top: 40px;
+}
+
+header > h1 {
+    color: white;
+    font-family:var(--font-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px black;
+}
+
+header > p {
+    font-family:var(--font-padrao);
+    font-size: 1.4em;
+    color: rgb(252, 252, 252);
+    max-width: 600px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgb(251, 248, 248);
+}
+
+nav {
+    background-color:var(--cor6);
+    padding: 10px;
+    box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.521);
+    font-weight: bold;
+       }
+
+nav > a {
+    color:rgb(250, 248, 248);
+    padding:10px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition-duration: 1ms;
+}
+
+nav > a:hover {
+    background-color: var(--cor3);
+}
+
+main {
+    /* DEFINIR A LARGURA DO SITE - magin:auto - Resposividade */
+    min-width: 300px;
+    max-width: 1000px;
+    margin:auto;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.534);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+main h1 {
+    color:var(--cor6);
+    font-family:var(--font-android);
+    font-weight:normal;
+}
+
+main h2 {
+    font-family:var(--font-android);
+    color: var(--cor6);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor0),transparent); /*Linha transparente*/
+    text-indent: 10px;
+}
+
+main p { /* Um p pode estar dentro de main em qualquer nível*/
+    /* Criou magen em todos os paragrafos */
+   margin: 15px 0px 15px 0px;
+   text-align: justify;
+   text-indent: 30px; /*Faz o recuo do paragrafo*/
+   font-size: 1em;
+   line-height: 2em; /*Aumenta o espaçanmento horizontal*/
+}
+
+main strong {
+    color: var(--cor0);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    background-color:#157ceb3d;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor5);
+}
+
+main img {
+    width: 100%;
+}
+
+/* Para centralizar img utilizar display:block e margin:auto */
+main img.pequena{
+    max-width: 350px;
+    display:block;
+    margin: auto;
+}
+/* Para colocar embedar um video e deixar ele centralizado no seu site! */
+div.video {
+    background-color: #185399;
+    margin:0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 50%; /*Diminuir as barras pretas na lateral do video*/
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+
+aside {
+    background-color: var(--cor0);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.336);
+}
+
+aside > h3 {
+    background-color: var(--cor6);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /*Margin negativa em cima, direita e esquerda*/
+    border-radius: 10px 10px 0px 0px;
+    text-indent: 10px;
+
+}
+
+aside > ul {
+    list-style-type:'\1F5F8\00a0'; /*Para colocar o emoticon, lembrar da contra barra, não é compativel com todo tipo de navegador*/
+    list-style-position: inside; 
+    columns: 2;
+    
+}
+
+footer {
+    background-color: var(--cor6);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration:underline;
+}
+
